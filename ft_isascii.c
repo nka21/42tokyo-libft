@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkojima <nkojima@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/05 18:51:34 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/05 18:51:35 by nkojima          ###   ########.fr       */
+/*   Created: 2025/05/05 18:51:28 by nkojima           #+#    #+#             */
+/*   Updated: 2025/05/05 18:57:41 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// 文字が数字であることを判定します。
-// 「数字である」とは、「文字が0から9(ASCIIコードでいえば48から57)である」ことです。
-// 真：数字　　　→0以外を返す
-// 偽：数字以外　→0を返す
+// 文字がASCII文字であることを判定します。
+// 「ASCII文字である」とは、文字のASCIIコードが0から127であることです。
+// 真：ASCII文字　　　→0以外を返す
+// 偽：ASCII文字以外　→0を返す
 
-int	ft_isdigit(int c)
+int	ft_isascii(int c)
 {
 	unsigned char	uc;
 
 	uc = (unsigned char)c;
-	return ('0' <= uc && uc <= '9');
+	return (0 <= uc && uc <= 127);
 }
 
 // int	main(void)
 // {
-// 	printf("ft_isdigit(): %d\n", ft_isdigit('9'));
-// 	printf("isdigit(): %d\n", isdigit('9'));
-// 	printf("ft_isdigit(): %d\n", ft_isdigit('a'));
-// 	printf("isdigit(): %d\n", isdigit('a'));
+// 	printf("ft_isascii('!'): %d\n", ft_isascii('!'));
+// 	printf("isascii('!'): %d\n", isascii('!'));
+// 	printf("ft_isascii(EOF): %d\n", ft_isascii(EOF));
+// 	printf("isascii(EOF): %d\n", isascii(EOF));
 // 	return (0);
 // }

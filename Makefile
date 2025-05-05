@@ -6,7 +6,7 @@
 #    By: nkojima <nkojima@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/26 16:47:58 by nkojima           #+#    #+#              #
-#    Updated: 2025/04/26 16:56:39 by nkojima          ###   ########.fr        #
+#    Updated: 2025/05/05 19:02:44 by nkojima          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,8 +23,11 @@ RM        = rm -f
 #################################
 #         Source & Objects      #
 #################################
-SRC       = $(wildcard ft_*.c)
-OBJ       = $(SRC:.c=.o)
+SRCS 	   = ft_isalpha.c \
+			 ft_isdigit.c \
+			 ft_isalnum.c \
+			 ft_isascii.c
+OBJS       = $(SRCS:.c=.o)
 
 #################################
 #            Rules              #
@@ -34,15 +37,15 @@ OBJ       = $(SRC:.c=.o)
 all: $(NAME)
 
 # ライブラリ作成：既存のオブジェクトが変わらなければ再生成しない
-$(NAME): $(OBJ)
-	$(AR) $(ARFLAGS) $@ $^
+$(NAME): $(OBJS)
+	$(AR) $(ARFLAGS) $@ $?
 
 # オブジェクト生成：ヘッダが変更されたら再コンパイル
 %.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJ)
+	$(RM) $(OBJS)
 
 fclean: clean
 	$(RM) $(NAME)

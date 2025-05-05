@@ -1,12 +1,21 @@
-#include <ctype.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nkojima <nkojima@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/05 18:51:31 by nkojima           #+#    #+#             */
+/*   Updated: 2025/05/05 18:51:32 by nkojima          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/**
- * 0~255
- * その値が、アルファベットかどうか。
- * true: 0以外(ここでは1を返す)
- * false: 0
- */
+#include "libft.h"
+
+// 文字が英字であることを判定します。
+// 「英字である」とは、「文字がAからZ もしくはaからzである」ことです。
+// 真：英字　　　→0以外を返す
+// 偽：英字以外　→0を返す
 
 int	ft_islower(unsigned char c)
 {
@@ -30,9 +39,11 @@ int	ft_isalpha(int c)
 	return (ft_islower(uc) || ft_isupper(uc));
 }
 
-int	main(void)
-{
-	printf("%d\n", ft_isalpha(0x0f));
-	printf("%d\n", isalpha(0x0f));
-	return (0);
-}
+// int	main(void)
+// {
+// 	printf("ft_isalpha('a'): %d\n", ft_isalpha('a'));
+// 	printf("isalpha('a'): %d\n", isalpha('a'));
+// 	printf("ft_isalpha(0x0f): %d\n", ft_isalpha(0x0f));
+// 	printf("isalpha(0x0f): %d\n", isalpha(0x0f));
+// 	return (0);
+// }
