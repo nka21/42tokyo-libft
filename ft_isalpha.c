@@ -6,7 +6,7 @@
 /*   By: nkojima <nkojima@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 18:51:31 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/05 18:51:32 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/11 18:09:09 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 // 真：英字　　　→0以外を返す
 // 偽：英字以外　→0を返す
 
-int	ft_islower(unsigned char c)
+static int	ft_islower(unsigned char c)
 {
 	return ('a' <= c && c <= 'z');
 }
 
-int	ft_isupper(unsigned char c)
+static int	ft_isupper(unsigned char c)
 {
 	return ('A' <= c && c <= 'Z');
 }

@@ -6,7 +6,7 @@
 #    By: nkojima <nkojima@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/26 16:47:58 by nkojima           #+#    #+#              #
-#    Updated: 2025/05/05 19:02:44 by nkojima          ###   ########.fr        #
+#    Updated: 2025/05/11 19:47:40 by nkojima          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,10 @@ RM        = rm -f
 SRCS 	   = ft_isalpha.c \
 			 ft_isdigit.c \
 			 ft_isalnum.c \
-			 ft_isascii.c
+			 ft_isascii.c \
+			 ft_isprint.c \
+			 ft_strlen.c \
+			 ft_memset.c \
 OBJS       = $(SRCS:.c=.o)
 
 #################################
