@@ -6,10 +6,12 @@
 /*   By: nkojima <nkojima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:27:15 by nkojima           #+#    #+#             */
-/*   Updated: 2025/05/15 19:10:25 by nkojima          ###   ########.fr       */
+/*   Updated: 2025/05/15 22:15:34 by nkojima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n) {
+	
+}
